@@ -1,0 +1,39 @@
+<div class="app-register" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box theme-darker-bg-color">
+    <mat-card-header>
+      <img src="../../../assets/images/main.webp" alt="logo">
+      <p class="welcome" i18n="welcome|login title@@loginWelcome">Create New Account</p>
+    </mat-card-header>
+    <form [formGroup]="registerForm" (submit)="onRegisterSubmit()" class="sign-up-form">
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" formControlName="email" i18n-placeholder i18n="email|email@@email">
+          <mat-error
+            *ngIf="registerForm.get('email')?.hasError('pattern')&&registerForm.get('email')?.errors!['pattern']" i18n>
+            Email is not correct
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="First Name" formControlName="firstName" i18n-placeholder
+                 i18n="firstName|firstName@@firstName">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Last Name" formControlName="lastName" i18n-placeholder
+                 i18n="lastName|lastName@@lastName">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Password" type="password" formControlName="password" i18n-placeholder
+                 i18n="password|password@@password">
+        </mat-form-field>
+      </mat-card-content>
+      <div class="btn-wrapper">
+        <button [disabled]="!registerForm.valid" mat-raised-button class="btn-block theme-btn-primary"
+                type="submit"
+                color="primary"
+                i18n="sign up|sign up@@signUp">Register
+        </button>
+        <a routerLink="/auth/login" class="theme-link" i18n="login|login@@login">Login</a>
+      </div>
+    </form>
+  </mat-card>
+</div>

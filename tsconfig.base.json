@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@angular-test/admin-panel/auth": ["libs/admin-panel/auth/src/index.ts"],
+      "@angular-test/admin-panel/core": ["libs/admin-panel/core/src/index.ts"],
+      "@angular-test/admin-panel/pages": [
+        "libs/admin-panel/pages/src/index.ts"
+      ],
+      "@angular-test/admin-panel/shared": [
+        "libs/admin-panel/shared/src/index.ts"
+      ],
+      "@angular-test/admin-panel/utils": ["libs/admin-panel/utils/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

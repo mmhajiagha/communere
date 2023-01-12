@@ -1,0 +1,28 @@
+.add-location {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 300px;
+  padding: 50px 9px 20px;
+
+  .close-btn {
+
+  }
+
+  .toolbar {
+    position: absolute;
+    width: 96%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      margin-right: 10px;
+    }
+  }
+}

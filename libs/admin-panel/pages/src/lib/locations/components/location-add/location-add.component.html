@@ -1,0 +1,21 @@
+<div>
+  <ng-container *ngIf="componentMode === 'LIST'">
+    <button mat-fab color="primary" [matTooltip]="'Add Location'" (click)="onAddLocationClick()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </ng-container>
+  <div class="add-location" *ngIf="componentMode === 'ADD'">
+    <div class="toolbar">
+      <h4>Add New Location</h4>
+      <button mat-icon-button class="close-btn" color="primary" [matTooltip]="'Close'" (click)="onCloseClick()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="title" placeholder="Title">
+    </mat-form-field>
+    <button [disabled]="!title" mat-raised-button color="primary" type="button" (click)="onSubmitLocationClick()">
+      Save
+    </button>
+  </div>
+</div>

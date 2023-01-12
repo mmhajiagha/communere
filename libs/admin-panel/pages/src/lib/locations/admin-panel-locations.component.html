@@ -1,0 +1,14 @@
+<div class="locations">
+  <test-map
+    #testMapRef
+    [locations]="locations"
+    [center]="centerLocation"
+    (locationChange)="onLocationChange($event)"
+    (locationDelete)="onLocationDeleteClick($event)"
+    [interactive]="false">
+  </test-map>
+  <location-add (onAddLocation)="onAddLocationClick()"
+                (onSubmitLocation)="onSubmitLocationClick($event)"
+                (onClose)="onCloseClick()">
+  </location-add>
+</div>
